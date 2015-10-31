@@ -8,7 +8,8 @@ $sample_ip="";
 $sample_code="";
 $output=array();
 $error=array();
-
+//test for sample inputs 
+/*
 function test($i,$ques)
 {
 		$name="../../sample/".$ques.$i."out.txt";
@@ -38,6 +39,7 @@ function test($i,$ques)
 
 
 }
+
 function fun($run,$ques)
 {
 
@@ -93,9 +95,7 @@ function fun($run,$ques)
 					$score=$score+$newscr;
 					$tp=date('Y-m-d H:i:s');
 					
-						/*if(strtotime($time1)==0)
-							$tp=date('Y-m-d H:i:s',strtotime($tp)-strtotime($time));
-						else*/
+						
 							$tp=strtotime($tp)-strtotime($time);
 						//echo $tp;
 							
@@ -116,7 +116,7 @@ function fun($run,$ques)
 
 }
 
-
+*/
 if(isset($_POST['submit']))
 {
      $stat=$_POST['submit'];
@@ -487,7 +487,8 @@ else  // either of cases  ot choosen
 
 ?>
 
-<div align="right"><a href="../../index.php" align="right">LOGOUT</a></div>
+<!--<div align="right"><a href="../../index.php" align="right">LOGOUT</a></div>-->
+<!--to load questions from another file-->
 <script>
 function Fun() {
 str=document.getElementById('ques').value;
@@ -507,7 +508,7 @@ str=document.getElementById('ques').value;
       document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
     }
   }
-  xmlhttp.open("GET","../../getdat.php?q="+str,true);
+  xmlhttp.open("GET","getdat.php?q="+str,true);
   xmlhttp.send();
 }
 
